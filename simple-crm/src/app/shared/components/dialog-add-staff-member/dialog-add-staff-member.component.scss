@@ -1,0 +1,124 @@
+.add-staff-member-wrapper {
+  height: 80vh;
+  height: 80dvh;
+  width: 80vw;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-wrapper {
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    padding-inline: 24px;
+    font-size: xx-small;
+  }
+}
+
+mat-dialog-content {
+  flex: 1 1 0;
+}
+
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "firstName"
+    "lastName"
+    "birthDate"
+    "eMail"
+    "street"
+    "zip"
+    "city"
+    "photo";
+
+  mat-hint {
+    font-size: xx-small;
+  }
+
+  mat-label {
+    font-size: smaller;
+  }
+}
+
+.first-name {
+  grid-area: firstName;
+}
+
+.last-name {
+  grid-area: lastName;
+}
+
+.birth-date {
+  grid-area: birthDate;
+}
+
+.e-mail {
+  margin: 12px 0 0;
+  grid-area: eMail;
+}
+
+.street {
+  grid-area: street;
+}
+
+.zip {
+  grid-area: zip;
+}
+
+.city {
+  grid-area: city;
+}
+
+.upload-field {
+  grid-area: photo;
+}
+
+.upload-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .select-file-button {
+    margin: 12px 0 0;
+  }
+}
+
+mat-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media (min-width: 48em) {
+  .form-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "firstName firstName firstName lastName lastName lastName"
+      " birthDate birthDate birthDate birthDate birthDate birthDate"
+      "eMail eMail eMail eMail eMail eMail"
+      "street street street street street street"
+      "zip zip  city city city city"
+      "photo photo photo photo photo photo";
+    column-gap: 4px;
+  }
+
+  .e-mail {
+    margin: 12px 0 0;
+  }
+
+  .zip {
+    width: 100%;
+  }
+
+  .dialog-action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}

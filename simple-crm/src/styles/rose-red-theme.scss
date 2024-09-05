@@ -1,0 +1,31 @@
+@use "@angular/material" as mat;
+@import "./custom-palette.scss";
+
+@include mat.core();
+
+$rose-red-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-rose-palette,
+      accent: $custom-magenta-palette,
+      warn: $custom-warn-palette,
+    ),
+  )
+);
+
+@include mat.core-theme($rose-red-theme);
+
+@include mat.button-theme($rose-red-theme);
+@include mat.toolbar-theme($rose-red-theme);
+@include mat.sidenav-theme($rose-red-theme);
+@include mat.icon-theme($rose-red-theme);
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

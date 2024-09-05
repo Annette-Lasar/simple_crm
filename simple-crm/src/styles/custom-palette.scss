@@ -1,0 +1,108 @@
+// src/styles/custom-palette.scss
+@use '@angular/material' as mat;
+
+// Definiere eine benutzerdefinierte Primär-Palette basierend auf #FFD9E1
+$custom-rose-palette: mat.define-palette((
+  50: #fff0f4,  // Sehr helles Rosa
+  100: #ffdae0,  // Sehr helles Rosa, etwas kräftiger
+  200: #ffc0cc,  // Helles Rosa
+  300: #ffa6b8,  // Mäßig helles Rosa
+  400: #ff8da4,  // Mäßig kräftiges Rosa
+  500: #FFD9E1,  // Hauptfarbe (sehr helles Rosa)
+  600: #ff627b,  // Kräftigeres Rosa
+  700: #ff4e69,  // Kräftiges Rosa
+  800: #ff3b57,  // Dunkleres, kräftiges Rosa
+  900: #ff2644,  // Sehr kräftiges Dunkelrosa
+  A100: #ff8da4,  // Akzentfarbe 1
+  A200: #ff4e69,  // Akzentfarbe 2
+  A400: #ff2644,  // Akzentfarbe 3
+  A700: #ba005c,  // Akzentfarbe 4 (dunkleres Rosa, vom Farbpicker)
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+));
+
+$custom-magenta-palette: mat.define-palette((
+  50: #fce4ec,
+  100: #f8bbd0,
+  200: #f48fb1,
+  300: #f06292,
+  400: #ec407a,
+  500: #e91e63,  // Hauptfarbe Magenta
+  600: #d81b60,
+  700: #c2185b,
+  800: #ad1457,
+  900: #880e4f,
+  A100: #ff80ab,
+  A200: #ff4081,
+  A400: #f50057,
+  A700: #c51162,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+));
+
+// Definiere eine benutzerdefinierte Akzent-Palette basierend auf #BA005C
+$custom-pink-palette: mat.define-palette((
+  50: #fce4ec,  // Helles Pink
+  100: #f8bbd0,  // Helles Rosa-Pink
+  200: #f48fb1,  // Rosa-Pink
+  300: #f06292,  // Kräftiges Rosa
+  400: #ec407a,  // Dunkleres Rosa
+  500: #e91e63,  // Kräftiges Rosa-Rot
+  600: #d81b60,  // Kräftigeres Rosa-Rot
+  700: #c2185b,  // Kräftiges Dunkelrosa
+  800: #ad1457,  // Sehr kräftiges Dunkelrosa
+  900: #BA005C,  // Hauptfarbe (sehr dunkles Rosa-Rot, vom Farbpicker)
+  A100: #ff80ab,  // Akzentfarbe 1
+  A200: #ff4081,  // Akzentfarbe 2
+  A400: #f50057,  // Akzentfarbe 3
+  A700: #c51162,  // Akzentfarbe 4
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+));
+
+
+
+// Optional: Definiere eine benutzerdefinierte Warn-Palette (hier als Beispiel)
+$custom-warn-palette: mat.define-palette(mat.$red-palette); // Verwende das vorhandene Material Red-Palette

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/reset_stylesheet.scss';
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #673AB7;
+  border-radius: 8px;
+  border: #673AB7 1px solid;
+}
+
+.component-wrapper {
+  height: calc(100vh - var(--mat-toolbar-mobile-height) - 42px);
+  padding: 16px;
+  position: relative;
+  border: #673AB7 1px solid;
+}

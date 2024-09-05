@@ -1,0 +1,14 @@
+
+.add-user-button {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+}
+
+
+@media (min-width: 48em) {
+    .component-wrapper {
+        height: calc(100vh - var(--mat-toolbar-standard-height) - 32px);
+    }
+
+}

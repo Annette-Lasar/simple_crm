@@ -1,0 +1,114 @@
+<div class="add-staff-member-wrapper">
+  <div class="title-wrapper">
+    <h2 mat-dialog-title>Add a staff member</h2>
+    <p>*This field is requierd</p>
+  </div>
+
+  <mat-dialog-content>
+    <form>
+      <div class="form-wrapper">
+        <mat-form-field appearance="fill" class="first-name">
+          <mat-label>First name</mat-label>
+          <input
+            [(ngModel)]="staffMember.firstName"
+            name="firstName"
+            matInput
+            required="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="last-name">
+          <mat-label>Last Name</mat-label>
+          <input
+            [(ngModel)]="staffMember.lastName"
+            name="lastName"
+            matInput
+            required="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="birth-date">
+          <mat-label>Birth Date</mat-label>
+          <input
+            [(ngModel)]="staffMember.birthDate"
+            name="birthDate"
+            matInput
+            [matDatepicker]="datepicker"
+          />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="datepicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #datepicker>
+            <mat-datepicker-actions>
+              <button mat-button matDatepickerCancel>Cancel</button>
+              <button mat-raised-button color="primary" matDatepickerApply>
+                Apply
+              </button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="e-mail">
+          <mat-label>Email address</mat-label>
+          <input
+            [(ngModel)]="staffMember.eMailAddress"
+            name="eMailAddress"
+            matInput
+            required="true"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="street">
+          <mat-label>Street and house number</mat-label>
+          <input [(ngModel)]="staffMember.street" name="street" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="zip">
+          <mat-label>ZIP code</mat-label>
+          <input [(ngModel)]="staffMember.zipCode" name="zipCode" matInput />
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="city">
+          <mat-label>City</mat-label>
+          <input [(ngModel)]="staffMember.city" name="city" matInput />
+        </mat-form-field>
+
+        <div class="upload-field">
+          <mat-label>Upload profile picture</mat-label>
+          <button
+            class="select-file-button"
+            mat-raised-button
+            color="basic"
+            (click)="fileInput.click()"
+            type="button"
+          >
+            Select file
+          </button>
+
+          <!-- Verstecktes Standard-Datei-Upload-Feld -->
+          <input
+            type="file"
+            #fileInput
+            accept="image/*"
+            style="display: none"
+          />
+
+          <!-- Zeigt den Namen der hochgeladenen Datei an -->
+        </div>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="dialog-action-buttons">
+    <button mat-button (click)="('#')">Cancel</button>
+    <button
+      mat-button
+      [mat-dialog-close]=""
+      (click)="saveUser()"
+      cdkFocusInitial
+      color="primary"
+    >
+      Save
+    </button>
+  </mat-dialog-actions>
+</div>
